@@ -1,6 +1,7 @@
 .button {
-  background-color: #4caf50; /* Green */
+  background: #007bff;
   border: none;
+  border-radius: 12px;
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -13,5 +14,6 @@
 }
 
 .button:hover {
-  background-color: #45a049;
+  /* Blue gradient on hover */
+  background: #004c9e;
 }
