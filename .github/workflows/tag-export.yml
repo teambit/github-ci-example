@@ -1,4 +1,4 @@
-name: Tag and Export
+name: Tag and Export and Commit Bitmap
 on:
   pull_request:
     branches:
@@ -20,3 +20,5 @@ jobs:
         uses: bit-tasks/init@v1
       - name: Bit Tag and Export
         uses: bit-tasks/tag-export@v1
+      - name: Bit Commit Bitmap
+        uses: bit-tasks/commit-bitmap@v1
