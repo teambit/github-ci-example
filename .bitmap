@@ -12,14 +12,14 @@
     "button": {
         "name": "button",
         "scope": "bit-examples.github-ci",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "github-ci/button"
     },
     "card": {
         "name": "card",
         "scope": "bit-examples.github-ci",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "github-ci/card"
     },
