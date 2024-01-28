@@ -1,18 +1,16 @@
-name: Tag and Export and Commit Bitmap
+name: Bit Commit Bitmap
 on:
-  pull_request:
-    branches:
-      - main
-    types: [closed]
+  workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   release:
-    if: ${{ github.event.pull_request.merged }}
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       GIT_USER_NAME: ${{ secrets.GIT_USER_NAME }}
       GIT_USER_EMAIL: ${{ secrets.GIT_USER_EMAIL }}
-      BIT_CLOUD_ACCESS_TOKEN: ${{ secrets.BIT_CLOUD_ACCESS_TOKEN }}
+      BIT_CONFIG_USER_TOKEN: ${{ secrets.BIT_CONFIG_USER_TOKEN }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -20,5 +18,5 @@ jobs:
         uses: bit-tasks/init@v1
       - name: Bit Tag and Export
         uses: bit-tasks/tag-export@v1
-      - name: Bit Commit Bitmap
+      - name: Commit Bitmap
         uses: bit-tasks/commit-bitmap@v1
