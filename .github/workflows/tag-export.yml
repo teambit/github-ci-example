@@ -1,8 +1,12 @@
-name: Tag and Export
+name: Tag and Export and Commit Bitmap
 on:
-  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    types: [closed]
 jobs:
   release:
+    if: ${{ github.event.pull_request.merged }}
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -16,3 +20,5 @@ jobs:
         uses: bit-tasks/init@v1
       - name: Bit Tag and Export
         uses: bit-tasks/tag-export@v1
+      - name: Bit Commit Bitmap
+        uses: bit-tasks/commit-bitmap@v1
