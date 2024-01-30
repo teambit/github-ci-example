@@ -4,7 +4,7 @@ import { Card } from './card';
 export const BasicCard = () => {
   return (
     <div style={{ margin: '2em' }}>
-      <Card>hello world!</Card>
+      <Card>This is a card</Card>
     </div>
   );
 };
