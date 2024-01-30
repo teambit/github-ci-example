@@ -20,9 +20,7 @@
 
 .card .footer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 16px;
+  padding: 8px;
 }
 
 .card.sm {
@@ -38,4 +36,16 @@
 .card.lg {
   height: 400px;
   width: 400px;
+}
+
+.card .footerSlot {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .buttonSlot {
+  display: flex;
+  justify-content: end;
 }
