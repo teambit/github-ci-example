@@ -19,7 +19,7 @@
     "card": {
         "name": "card",
         "scope": "bit-examples.github-ci",
-        "version": "0.0.4",
+        "version": "aeb07996faa7d9df99c9f509949e8eff53732dee",
         "mainFile": "index.ts",
         "rootDir": "github-ci/card"
     },
