@@ -1,7 +1,7 @@
-name: Tag and Export
+name: Tag and Export and Commit Bitmap
 on:
   pull_request:
-    branches: 
+    branches:
       - main
     types: [closed]
 jobs:
@@ -12,11 +12,13 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       GIT_USER_NAME: ${{ secrets.GIT_USER_NAME }}
       GIT_USER_EMAIL: ${{ secrets.GIT_USER_EMAIL }}
-      BIT_CLOUD_ACCESS_TOKEN: ${{ secrets.BIT_CLOUD_ACCESS_TOKEN }}
+      BIT_CONFIG_USER_TOKEN: ${{ secrets.BIT_CONFIG_USER_TOKEN }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
       - name: Initialize Bit
         uses: bit-tasks/init@v1
       - name: Bit Tag and Export
         uses: bit-tasks/tag-export@v1
+      - name: Bit Commit Bitmap
+        uses: bit-tasks/commit-bitmap@v1
