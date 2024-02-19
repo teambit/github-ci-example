@@ -4,6 +4,6 @@ import { BasicCard } from './card.composition';
 
 it('renders with the correct text', () => {
   const { getByText } = render(<BasicCard />);
-  const rendered = getByText('hello world!');
+  const rendered = getByText('This is a card');
   expect(rendered).toBeTruthy();
 });

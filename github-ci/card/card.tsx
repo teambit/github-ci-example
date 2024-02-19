@@ -12,7 +12,10 @@ export function Card({ children, footerButton, size = 'md' }: CardProps) {
   return (
     <div className={cardClasses.join(' ')}>
       <div className={styles.container}>{children}</div>
-      <footer className={styles.footer}>{footerButton}</footer>
+      <footer className={styles.footer}>
+        <div className={styles.footerSlot} />
+        <div className={styles.buttonSlot}>{footerButton}</div>
+      </footer>
     </div>
   );
 }
