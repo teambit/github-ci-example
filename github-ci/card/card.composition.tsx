@@ -12,7 +12,7 @@ export const BasicCard = () => {
 export const CardWithButton = () => {
   return (
     <div style={{ margin: '2em' }}>
-      <Card footerButton={<Button>Card Button</Button>}>hello world!</Card>
+      <Card footerButton={<Button>Card Button</Button>}>Card Content</Card>
     </div>
   );
 };
